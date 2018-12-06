@@ -11,9 +11,21 @@ namespace LerCnab.Business
 {
     public class LerCnab
     {
-        public void LerArquivoCnab400(Stream arquivo, ChekBank bank)
+        public ArquivoRetornoCNAB400 LerArquivoCnab400(Stream arquivo, Model.Banco bank)
         {
-            
+            BoletoNet.Banco banco = new BoletoNet.Banco(bank.Codigo);
+            ArquivoRetornoCNAB400 arquivoRetorno = new ArquivoRetornoCNAB400();
+
+            try
+            {
+                arquivoRetorno.LerArquivoRetorno(banco, arquivo);
+                return arquivoRetorno;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

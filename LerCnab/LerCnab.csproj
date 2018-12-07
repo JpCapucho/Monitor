@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\LerCnab.cs" />
+    <Compile Include="Business\VerificarArquivo.cs" />
     <Compile Include="Model\Banco.cs" />
     <Compile Include="Interface\ICodigoBanco.cs" />
     <Compile Include="Model\BancoDoBrasil.cs" />
